@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario di reserva</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/main.js"></script>
+
+    <style>
+
+      #messages{
+        width: 95%;
+        max-width: 400px;
+        height: 350px;
+        overflow-y: scroll;
+        border:1px solid black;
+        box-shadow: 0 0 20px #ccc inset;
+      }
+
+      .message{
+        margin: 20px;
+        padding: 5px;
+        border-radius: 5px;
+        background: white;
+        border:1px solid black;
+      }
+    
+    </style>
+  </head>
+  <body>
+      <h1>Chat con socket y node</h1>
+      <div id="messages"></div>
+
+      <form onsubmit="return addMessage(this);">
+        <input type="text" id="nickname" placeholder="Nickname"/>
+        <textarea name="" id="text" cols="30" rows="10" placeholder="mensaje.."></textarea>
+        <input type="submit" value="Enviar"/>
+      </form>
+  </body>
+</html>
